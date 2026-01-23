@@ -2,6 +2,7 @@ import streamlit as st
 import os
 from google import genai
 from google.genai import types
+from fpdf import FPDF
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
@@ -67,6 +68,22 @@ def generate_email(company_name, key):
     except Exception as e:
         return f"Error: {e}"
 
+def create_pdf(text):
+    """
+    Generates a PDF file from the provided text.
+    """
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=12)
+    
+    # Handle Unicode characters by replacing them or using a compatible logic
+    # FPDF 1.7.2 has limited unicode support. Basic encoding:
+    clean_text = text.encode('latin-1', 'replace').decode('latin-1')
+    
+    pdf.multi_cell(0, 10, clean_text)
+    return pdf.output(dest='S').encode('latin-1')
+
+
 # --- MAIN INTERFACE ---
 col1, col2 = st.columns([2, 1])
 
@@ -99,6 +116,15 @@ with col1:
                     st.markdown("---")
                     st.markdown(result.text)
                     st.markdown("---")
+                    
+                    # PDF Download Button
+                    pdf_bytes = create_pdf(result.text)
+                    st.download_button(
+                        label="📄 Download as PDF",
+                        data=pdf_bytes,
+                        file_name=f"{company}_cold_email.pdf",
+                        mime="application/pdf"
+                    )
                     
                     # Display Sources (Grounding Metadata)
                     if result.candidates[0].grounding_metadata.search_entry_point:
