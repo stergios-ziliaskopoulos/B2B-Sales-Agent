@@ -36,11 +36,15 @@ An intelligent **AI Sales Development Representative (SDR)** built with **Stream
     * Enter your **Google API Key** in the sidebar (Get one at [Google AI Studio](https://aistudio.google.com/)).
     * Type a company name (e.g., "Tesla", "Skroutz") and click **Generate**.
 
-## 📸 Example Usage
-**Input:** "Skroutz.gr"
-**Agent Action:** Searches Google -> Finds news about "Skroutz AI Assistant".
+## 📸 Interface Demo
+Here is the agent in action via the Streamlit Web Interface:
+
+![App Screenshot](Autonomous B2B Sales Agent screenshot.png)
+**Input:** "Plaisio.gr"
+**Agent Action:** Searches Google -> Finds news about "Plaisio.gr".
 **Output Email:**
-> "I saw the recent news about the launch of the Skroutz AI Assistant... My team specializes in backend automation that complements your new frontend AI tools..."
+> "I was impressed to see Plaisio's Group turnover reached €468.7 million in 2023, marking a strong 7.8% increase and continuing your impressive growth trajectory over the past five years...."
+
 
 ---
 *Developed by Stergios Ziliaskopoulos - AI Automation Expert*
