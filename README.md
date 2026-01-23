@@ -39,7 +39,7 @@ An intelligent **AI Sales Development Representative (SDR)** built with **Stream
 ## 📸 Interface Demo
 Here is the agent in action via the Streamlit Web Interface:
 
-![App Screenshot](Autonomous B2B Sales Agent screenshot.png)
+![App Screenshot](demo.png)
 **Input:** "Plaisio.gr"
 **Agent Action:** Searches Google -> Finds news about "Plaisio.gr".
 **Output Email:**
