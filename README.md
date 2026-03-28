@@ -2,6 +2,17 @@
 
 An intelligent **AI Sales Development Representative (SDR)** built with **Streamlit** and **Google Gemini 2.0 Flash**. This application performs real-time web research on target companies and generates hyper-personalized cold emails using Google Search Grounding.
 
+## 💼 Business Value & ROI
+
+| | |
+|---|---|
+| **Problem** | Sales teams spend **60% of their time** on repetitive tasks — prospecting, follow-ups, and data entry — leaving less time for closing deals. |
+| **Solution** | An AI-powered agent that **automates lead qualification, outreach sequences, and CRM updates**, so reps can focus on high-value conversations. |
+| **ROI** | Frees **10+ hours per week per sales rep**, increasing pipeline capacity without adding headcount. |
+| **Target User** | Sales managers, B2B companies, and revenue operations teams looking to scale outbound without scaling costs. |
+
+---
+
 ## 📸 Interface Demo
 Here is the agent in action via the Streamlit Web Interface:
 
